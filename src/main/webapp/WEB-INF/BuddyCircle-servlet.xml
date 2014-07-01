@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd">
+
+    <mvc:annotation-driven/>
+    <context:component-scan base-package="net.therap"/>
+
+    <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix" value="/WEB-INF/view/jspfiles"/>
+        <property name="suffix" value=".jsp"/>
+    </bean>
+
+    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+        <property name="maxUploadSize" value="10000000" />
+    </bean>
+
+    <bean id="hibernateTemplate" class="org.springframework.orm.hibernate3.HibernateTemplate">
+        <property name="sessionFactory" ref="mySessionFactory"/>
+    </bean>
+    <!--Dao-->
+    <bean id="userDao" class="net.therap.dao.UserDaoImpl">
+        <property name="hibernateTemplate" ref="hibernateTemplate"/>
+    </bean>
+
+    <bean id="postDao" class="net.therap.dao.PostDaoImpl">
+        <property name="hibernateTemplate" ref="hibernateTemplate"/>
+    </bean>
+    <bean id="friendDao" class="net.therap.dao.FriendDaoImpl">
+        <property name="hibernateTemplate" ref="hibernateTemplate"/>
+    </bean>
+    <bean id="commentDao" class="net.therap.dao.CommentDaoImpl">
+        <property name="hibernateTemplate" ref="hibernateTemplate"/>
+    </bean>
+
+    <!--Validator-->
+    <bean id="registrationValidator" class="net.therap.validator.RegistrationValidator">
+    </bean>
+    <bean id="logInValidator" class="net.therap.validator.LogInValidator"/>
+    <bean id="postValidator" class="net.therap.validator.PostValidator"/>
+    <bean id="CommentValidator" class="net.therap.validator.CommentValidator"/>
+
+    <!--Service-->
+
+    <bean id="userService" class="net.therap.services.UserServiceImpl">
+        <property name="userDao" ref="userDao"/>
+    </bean>
+    <bean id="postService" class="net.therap.services.PostServiceImpl">
+        <property name="postDao" ref="postDao"/>
+    </bean>
+    <bean id="friendService" class="net.therap.services.FriendServiceImpl">
+        <property name="friendDao" ref="friendDao"/>
+    </bean>
+    <bean id="commentService" class="net.therap.services.CommentServiceImpl">
+        <property name="commentDao" ref="commentDao"/>
+    </bean>
+</beans>

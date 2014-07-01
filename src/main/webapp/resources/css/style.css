@@ -1,0 +1,167 @@
+
+/*
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+*/
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+    /*background-image: url("/shproject/resources/img/bgPic.jpg");*/
+}
+table#head{
+    width: 80%;
+    margin: auto;
+    height: 100px;
+    font-size: 30pt;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-style: italic;
+    text-align: center;
+    background-image:url("/BuddyCircle/resources/img/images.jpeg");
+    color: #0e0b44;
+
+}
+table.userTable{
+    margin: auto;
+    width: 80%;
+    table-layout: fixed;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15pt;
+    color: #100331;
+}
+#pic{
+    background-color: #307dc3;
+}
+table{
+    align: center;
+    margin: auto;
+}
+
+table#searchTable{
+    width: 80%;
+    height:40px;
+    background-color: #091180;
+}
+
+table#menuTable{
+    margin: auto;
+    width: 80%;
+    height:50px;
+    padding: 10px;
+    border: 2;
+    border-right-color: #09043a;
+    background-color: #307dc3;
+}
+a.menulink{
+    text-align: center;
+    font-size: 10pt;
+    font-weight: bold;
+    color: #09043a;
+    text-decoration: underline;
+}
+td.menutd{
+    width:16%;
+}
+table#footer{
+    margin: auto;
+    width: 80%;
+    background-color: #4a6fff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12pt;
+    text-align: center;
+
+}
+table.wallpostTable{
+    width: 80%;
+    height: 90px;
+    margin: auto;
+    table-layout: fixed;
+    font-size: 12pt;
+    font-weight: bold;
+    color: #09043a;
+    background-image: url("/BuddyCircle/resources/img/images.jpeg");
+
+
+
+}
+td.textArea{
+    height: 50px;
+}
+td.holler{
+    height: 30px;
+}
+.submitbutton{
+    font-size: 12pt;
+    font-weight: bold;
+}
+table.mainTable{
+    width: 80%;
+    margin: auto;
+    font-size: 12pt;
+    color: #09043a;
+}
+table.postDetails{
+    width: 95%;
+    table-layout: fixed;
+    background-color: #f3fffa;
+    margin: auto;
+}
+th{
+    text-align: right;
+}
+
+#profile{
+    text-align: right
+}
+td.userName{
+    text-align: left;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 15pt;
+    font-weight: bold;
+    font-style: italic;
+    table-layout: fixed;
+}
+td.date{
+    text-align: right;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 10pt;
+    font-style: italic;
+    table-layout: fixed;
+
+}
+td.postContent{
+    text-align: left;
+    font-family: times;
+    font-size: 14pt;
+}
+td.audio{
+    text-align: right;
+}
+table.commentTable{
+    table-layout: fixed;
+    background-color: #d5ffec;
+    margin: auto;
+    width: 75%;
+}
+table.commentArea{
+    height: 90px;
+    table-layout: fixed;
+    font-size: 11pt;
+    font-weight: bold;
+    color: #09043a;
+    background-color: #cac4d9;
+}
+table.editTable{
+    width: 70%;
+    margin: auto;
+    font-size: 12pt;
+    color: #09043a;
+    text-align:left;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #41a7cf;
+    font-weight: bold;
+}

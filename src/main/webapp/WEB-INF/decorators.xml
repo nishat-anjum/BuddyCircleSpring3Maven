@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<decorators defaultdir="/WEB-INF/decorators">
+
+    <excludes>
+        <pattern>/login</pattern>
+        <pattern>/home</pattern>
+    </excludes>
+
+
+    <decorator name="BuddyCircle" page="pageDecorator.jsp">
+        <pattern>/*</pattern>
+    </decorator>
+
+</decorators>
